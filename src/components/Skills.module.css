@@ -1,0 +1,120 @@
+.section {
+  padding: 6rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "Fira Code", monospace;
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: var(--neu-shadow);
+  transition: all var(--transition-speed);
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--neu-shadow-hover);
+}
+
+.categoryTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.categoryIcon {
+  font-size: 1.5rem;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skillItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-primary);
+  border-radius: 12px;
+  box-shadow: var(--neu-shadow-sm);
+  transition: all var(--transition-speed);
+}
+
+.skillItem:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--neu-shadow);
+  color: var(--accent-color);
+}
+
+.skillIconWrapper {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skillIconWrapper svg {
+  width: 24px;
+  height: 24px;
+  color: var(--text-primary);
+}
+
+.skillIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+[data-theme="dark"] .skillIcon {
+  filter: brightness(1.1);
+}
+
+.skillItem span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+}

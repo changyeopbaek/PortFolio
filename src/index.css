@@ -1,0 +1,125 @@
+/* ===== Fonts ===== */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+/* ===== CSS Variables ===== */
+:root {
+  /* Light Theme (White Neumorphism with Orange Focus) */
+  --bg-primary: #e8e8e8;
+  --bg-secondary: #f0f0f0;
+  --text-primary: #2d2d2d;
+  --text-secondary: #666666;
+  --accent-color: #ff6b35;
+  --accent-hover: #ff8c5a;
+  --accent-light: rgba(255, 107, 53, 0.15);
+  --accent-glow: rgba(255, 107, 53, 0.3);
+
+  /* Neumorphism Shadows - Light */
+  --shadow-light: #ffffff;
+  --shadow-dark: #bebebe;
+  --neu-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
+  --neu-shadow-sm: 4px 4px 8px var(--shadow-dark),
+    -4px -4px 8px var(--shadow-light);
+  --neu-shadow-inset: inset 4px 4px 8px var(--shadow-dark),
+    inset -4px -4px 8px var(--shadow-light);
+  --neu-shadow-hover: 12px 12px 20px var(--shadow-dark),
+    -12px -12px 20px var(--shadow-light);
+
+  /* Card */
+  --card-bg: #e8e8e8;
+
+  /* Timeline */
+  --timeline-line: #d0d0d0;
+
+  /* Transition */
+  --transition-speed: 0.3s;
+}
+
+[data-theme="dark"] {
+  /* Dark Theme (Black Neumorphism with Blue Focus) */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --text-primary: #f0f0f0;
+  --text-secondary: #999999;
+  --accent-color: #4d96ff;
+  --accent-hover: #6ba8ff;
+  --accent-light: rgba(77, 150, 255, 0.15);
+  --accent-glow: rgba(77, 150, 255, 0.3);
+
+  /* Neumorphism Shadows - Dark (Black) */
+  --shadow-light: #1a1a1a;
+  --shadow-dark: #000000;
+  --neu-shadow: 8px 8px 16px var(--shadow-dark),
+    -8px -8px 16px var(--shadow-light);
+  --neu-shadow-sm: 4px 4px 8px var(--shadow-dark),
+    -4px -4px 8px var(--shadow-light);
+  --neu-shadow-inset: inset 4px 4px 8px var(--shadow-dark),
+    inset -4px -4px 8px var(--shadow-light);
+  --neu-shadow-hover: 12px 12px 20px var(--shadow-dark),
+    -12px -12px 20px var(--shadow-light);
+
+  /* Card */
+  --card-bg: #0a0a0a;
+
+  /* Timeline */
+  --timeline-line: #222222;
+}
+
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
+  overflow-x: hidden;
+}
+
+/* ===== Selection ===== */
+::selection {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+/* ===== Scroll Animation ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
