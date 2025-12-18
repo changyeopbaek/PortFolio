@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+# Changyeop's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+백창엽의 포트폴리오 웹사이트입니다. React + TypeScript + Vite로 제작되었습니다.
 
-Currently, two official plugins are available:
+## 🚀 시작하기
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 설치
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 개발 서버 실행
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+브라우저에서 `http://localhost:5173` (또는 표시된 포트)로 접속하세요.
+
+### 빌드
+
+```bash
+npm run build
+```
+
+### 미리보기
+
+```bash
+npm run preview
+```
+
+## 📄 이력서 PDF 추가하기
+
+포트폴리오에 이력서 다운로드 기능을 추가하려면:
+
+1. **이력서 PDF 파일 준비**
+   - PDF 형식의 이력서 파일을 준비하세요
+
+2. **파일 업로드**
+   - `public` 폴더에 이력서 PDF 파일을 복사하세요
+   - 파일명을 정확히 `resume.pdf`로 지정하세요
+
+3. **확인**
+   - 개발 서버를 재시작하거나 새로고침하세요
+   - Contact 섹션의 "이력서 Download" 버튼을 클릭하면 다운로드됩니다
+
+### 파일 구조 예시
+
+```
+portfolio/
+├── public/
+│   ├── resume.pdf  ← 여기에 이력서 PDF 파일 추가
+│   ├── portfolio-1.pdf
+│   ├── portfolio-2.pdf
+│   └── vite.svg
+└── src/
+    └── ...
+```
+
+## 🎨 주요 기능
+
+- ✅ 다크/라이트 모드 전환
+- ✅ 타이핑 애니메이션 효과 (무한 루프)
+- ✅ 스무스 스크롤 네비게이션
+- ✅ 뉴모피즘 디자인
+- ✅ 반응형 레이아웃
+
+## 🛠️ 기술 스택
+
+- React 18
+- TypeScript
+- Vite
+- CSS Modules
+
+## 📝 라이선스
+
+© 2025. Baek Changyeop. All rights reserved.
