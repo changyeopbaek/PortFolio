@@ -2,6 +2,16 @@ import { MailIcon } from "./Icons";
 import styles from "./Contact.module.css";
 
 export const Contact = () => {
+  const handleMailClick = () => {
+    const email = "martinbaek94@gmail.com";
+    const subject = encodeURIComponent("문의");
+    const body = encodeURIComponent(
+      "안녕하세요,\n\n포트폴리오를 보고 연락드립니다.\n\n"
+    );
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+    window.open(gmailUrl, "_blank");
+  };
+
   return (
     <section className={styles.section} id="contact">
       <div className={styles.container}>
@@ -13,13 +23,13 @@ export const Contact = () => {
           </p>
 
           <div className={styles.buttons}>
-            <a
-              href="mailto:martinbaek94@gmail.com"
+            <button
+              onClick={handleMailClick}
               className={`${styles.button} ${styles.primary}`}
             >
               <MailIcon />
               메일 보내기
-            </a>
+            </button>
           </div>
         </div>
       </div>
