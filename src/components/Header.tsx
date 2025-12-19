@@ -24,9 +24,7 @@ export const Header = ({ theme, onToggleTheme }: HeaderProps) => {
     <header className={styles.header}>
       <div className={styles.container}>
         <a href="#" className={styles.logo}>
-          <span className={styles.bracket}></span>
-          ChangyeoPolio
-          <span className={styles.bracket}></span>
+          changyeopolio
         </a>
 
         <nav className={styles.nav}>

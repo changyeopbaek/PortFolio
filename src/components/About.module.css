@@ -1,5 +1,10 @@
 .section {
   padding: 6rem 2rem;
+  background: linear-gradient(
+    to bottom,
+    var(--bg-secondary) 0%,
+    var(--bg-primary) 15%
+  );
 }
 
 .container {
@@ -16,6 +21,7 @@
   color: var(--accent-color);
   margin-bottom: 1rem;
   text-align: center;
+  user-select: none;
 }
 
 .card {
@@ -38,6 +44,7 @@
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--accent-color);
   display: inline-block;
+  user-select: none;
 }
 
 .introCard {
@@ -48,6 +55,7 @@
   font-size: 1.2rem;
   line-height: 2;
   color: var(--text-secondary);
+  user-select: none;
 }
 
 /* Interests */
@@ -67,7 +75,6 @@
 }
 
 .interestItem:hover {
-  transform: translateY(-5px);
   box-shadow: var(--neu-shadow);
 }
 
@@ -79,12 +86,14 @@
 .interestItem span {
   font-weight: 500;
   color: var(--text-secondary);
+  user-select: none;
 }
 
 /* Timeline */
 .timeline {
   position: relative;
   padding-left: 2rem;
+  user-select: none;
 }
 
 .timeline::before {
@@ -121,10 +130,6 @@
   background-color: var(--accent-color);
   box-shadow: 0 0 0 4px var(--accent-light);
   transition: all var(--transition-speed);
-}
-
-.timelineItem:hover .timelineDot {
-  transform: scale(1.3);
 }
 
 .timelineContent {
@@ -196,6 +201,7 @@
   color: var(--accent-color);
   font-weight: 600;
   font-family: "Fira Code", monospace;
+  user-select: none;
 }
 
 .infoValue {
@@ -222,7 +228,6 @@
 
 .awardItem:hover {
   box-shadow: var(--neu-shadow);
-  transform: translateY(-3px);
 }
 
 .awardDate {
@@ -231,6 +236,7 @@
   color: var(--accent-color);
   font-weight: 600;
   min-width: 80px;
+  user-select: none;
 }
 
 .awardContent {
@@ -242,11 +248,13 @@
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 0.25rem;
+  user-select: none;
 }
 
 .awardOrg {
   font-size: 0.9rem;
   color: var(--text-secondary);
+  user-select: none;
 }
 
 /* Overseas Experience */
@@ -276,15 +284,17 @@
   font-size: 0.9rem;
   color: var(--accent-color);
   font-weight: 600;
+  user-select: none;
 }
 
 .experienceLocation {
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-weight: 500;
   padding: 0.25rem 0.75rem;
-  background-color: var(--accent-light);
+  background-color: var(--accent-color);
   border-radius: 12px;
+  user-select: none;
 }
 
 .experienceDesc {
@@ -292,6 +302,7 @@
   color: var(--text-secondary);
   line-height: 1.6;
   white-space: pre-line;
+  user-select: none;
 }
 
 @media (max-width: 768px) {

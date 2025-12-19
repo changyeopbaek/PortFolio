@@ -5,4 +5,5 @@
   color: var(--text-secondary);
   font-size: 0.9rem;
   box-shadow: var(--neu-shadow-sm);
+  user-select: none;
 }

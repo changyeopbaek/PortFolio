@@ -6,6 +6,7 @@
   box-shadow: var(--neu-shadow-sm);
   transition: background-color var(--transition-speed),
     box-shadow var(--transition-speed);
+  user-select: none;
 }
 
 .container {
@@ -18,9 +19,9 @@
 }
 
 .logo {
-  font-family: "Fira Code", monospace;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-family: "Limelight", cursive;
+  font-size: 1.3rem;
+  font-weight: 400;
   color: var(--text-primary);
   text-decoration: none;
   transition: color var(--transition-speed);

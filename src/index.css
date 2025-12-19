@@ -86,6 +86,10 @@ body {
   transition: background-color var(--transition-speed),
     color var(--transition-speed);
   overflow-x: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 /* ===== Selection ===== */

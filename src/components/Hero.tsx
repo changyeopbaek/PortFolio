@@ -77,14 +77,14 @@ export const Hero = () => {
             className={`${styles.button} ${styles.secondary} ${styles.tooltipButton}`}
             data-tooltip="2020년 ~ 2023년 까지의 경험이 담겨있습니다."
           >
-            포트폴리오-1
+            포트폴리오-A
           </button>
           <button
             onClick={handlePortfolio2}
             className={`${styles.button} ${styles.secondary} ${styles.tooltipButton}`}
             data-tooltip="2023년 ~ 2024년 까지의 경험이 담겨있습니다."
           >
-            포트폴리오-2
+            포트폴리오-B
           </button>
         </div>
       </div>
